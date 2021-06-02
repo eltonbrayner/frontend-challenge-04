@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --text-faq: hsl(238, 29%, 16%);
+  --text-title: hsl(237, 12%, 33%);
+  --text-body: hsl(240, 6%, 50%);
+  --text-hover: hsl(14, 88%, 65%);
+  --border-color: hsl(240, 5%, 91%);
+  --card-color: #ffff;
+  --gradient-color01: hsl(273, 75%, 66%);
+  --gradient-color02: hsl(240, 73%, 65%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+
+  height: 100vh;
+
+  background: linear-gradient(var(--gradient-color01), var(--gradient-color02));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 50rem;
+  height: 25rem;
+
+  background-color: var(--card-color);
+  border-radius: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.left {
+  overflow: hidden;
+}
+
+.left img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+
+  transform: translateX(-10%);
+}
+
+.left .box {
+  position: absolute;
+  transform: translate(-40%, -110%);
+}
+
+.card p {
+  line-height: 1.5rem;
+  display: inline;
+}
+
+.card p:hover,
+.card img {
+  color: var(--text-hover);
+  cursor: pointer;
+}
+
+.card .answer {
+  display: none;
+}
